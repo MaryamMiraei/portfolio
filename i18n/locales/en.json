@@ -1,0 +1,15 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "certificate":"certificate",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm Maryam Miraei",
+    "description": "I'm enthusiastic about discovering new digital technologies and expanding my knowledge of innovative, creative design principles. My curiosity drives me to continuously learn about modern technologies and their potential to create meaningful experiences.",
+    "button": "Download Resume"
+  }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   motion,
@@ -54,6 +54,11 @@ const icons = [
 ];
 
 const FloatingSphere = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const autoRotation = useMotionValue(0);
@@ -120,15 +125,21 @@ const FloatingSphere = () => {
     mouseX.set(0);
     mouseY.set(0);
   };
+  if (!isMounted) {
+    return (
+      <div className="relative flex size-[300px] items-center justify-center overflow-hidden">
+        <div className="h-[100px] w-[100px]" />
+      </div>
+    );
+  }
 
   return (
     <div
-      className="relative flex size-[300px]  items-center justify-center overflow-hidden"
+      className="relative flex size-[300px] items-center justify-center overflow-hidden"
       style={{ perspective: "1000px" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* کره */}
       <motion.div
         className="relative h-[100px] w-[100px]"
         style={{
@@ -137,10 +148,6 @@ const FloatingSphere = () => {
           rotateY: autoRotation,
         }}
       >
-        {/* ظاهر کره */}
-        {/* <div className="absolute inset-0 rounded-full border border-white/10 bg-blue-400/[0.03] shadow-[inset_0_0_80px_rgba(56,189,248,0.08)]" /> */}
-
-        {/* آیکون‌ها */}
         {icons.map(({ Icon, color }, index) => {
           const position = positions[index];
 
@@ -158,16 +165,13 @@ const FloatingSphere = () => {
                 backfaceVisibility: "hidden",
               }}
             >
-              {/* آیکون همیشه رو به دوربین */}
               <motion.div
                 style={{
                   rotateY: inverseAutoRotation,
                   rotateX: inverseMouseY,
                   rotateZ: inverseMouseX,
                 }}
-                animate={{
-                  y: [0, -7, 0],
-                }}
+                animate={{ y: [0, -7, 0] }}
                 transition={{
                   duration: 2 + (index % 4) * 0.5,
                   repeat: Infinity,

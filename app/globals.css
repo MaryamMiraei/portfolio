@@ -7,13 +7,21 @@
     rgba(158, 5, 5, 1) 42%,
     rgba(120, 2, 2, 1) 58%
   );
-  --background-image-body-first:  linear-gradient(13deg,rgba(186, 186, 186, 1) 0%, rgba(255, 250, 250, 1) 100%);
-  --background-image-body-second:  linear-gradient(13deg,rgba(15, 15, 15, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  --background-image-body-first: linear-gradient(
+    13deg,
+    rgba(186, 186, 186, 1) 0%,
+    rgba(255, 250, 250, 1) 100%
+  );
+  --background-image-body-second: linear-gradient(
+    13deg,
+    rgba(15, 15, 15, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 
   --color-text-first: #000;
   --color-text-second: #fff;
   --color-text-third: #757575;
-  --color-text-fourth: #8a0707;
+  --color-text-fourth: #df020f;
   --color-border-first: #ccc;
   --color-border-second: #303030;
   --background-image-card-first: linear-gradient(
@@ -26,8 +34,12 @@
     rgba(5, 5, 5, 1) 0%,
     rgba(21, 21, 21, 1) 64%
   );
+  --shadow-custom-first: 0 4px 10px rgba(115, 6, 6, 0.75);
+  --shadow-custom-second: 0 4px 10px rgba(115, 6, 6, 0.25);
+
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
