@@ -3,22 +3,31 @@
 import Menu from "./Menu";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
+import { useEffect, useRef, useState } from "react";
+import { menuItems } from "../data/MenuItems";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import MenuModal from "./MenuModal";
 const Header = () => {
-  const { t } = useTranslation();
-
   const [activeSection, setActiveSection] = useState("home");
-  const menuItems = [
-    { title: t("header.home"), href: "#home" },
-    { title: t("header.about"), href: "#about" },
-    { title: t("header.projects"), href: "#projects" },
-    { title: t("header.skills"), href: "#skills" },
-    { title: t("header.certificate"), href: "#certificate" },
-    { title: t("header.contact"), href: "#contact" },
-  ];
+  const [menuModalOpen, setMenuModalOpen] = useState(false);
+  const { t } = useTranslation();
+  const menuRef = useRef<HTMLDivElement>(null);
+   useEffect(() => {
+     const handleClickOutside = (event: MouseEvent) => {
+       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+         setMenuModalOpen(false);
+       }
+     };
+
+     document.addEventListener("mousedown", handleClickOutside);
+
+     return () => {
+       document.removeEventListener("mousedown", handleClickOutside);
+     };
+   }, []);
+
   return (
-    <header className="flex justify-between items-center border-b border-border-first dark:border-border-second dark:bg-black bg-white h-[70px] pr-0 pl-6">
+    <header className="flex justify-between items-center border-b border-border-first dark:border-border-second dark:bg-black bg-white h-[70px] px-6">
       <div>
         <img
           src="/Glossy-Chrome-M-with-Red-Ribbons.png"
@@ -30,7 +39,10 @@ const Header = () => {
         <div className="flex gap-3">
           <LanguageToggle />
           <ThemeToggle />
-          <Menu />
+          <div className="relative" ref={menuRef}>
+            <Menu onClose={() => setMenuModalOpen((prev) => !prev)} />
+            {menuModalOpen && <MenuModal />}
+          </div>
         </div>
         <nav className="hidden md:flex justify-end items-center gap-6 text-text-first dark:text-text-second px-5 font-medium">
           {menuItems.map((item) => {
@@ -47,7 +59,7 @@ const Header = () => {
                 }`}
               >
                 <span className="relative inline-block">
-                  {item.title}
+                  {t(`header.${item.title}`)}
 
                   {/* Animated underline */}
                   <span
@@ -62,6 +74,7 @@ const Header = () => {
             );
           })}
         </nav>
+        {/*  */}
       </div>
     </header>
   );

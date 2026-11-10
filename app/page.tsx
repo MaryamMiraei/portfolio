@@ -14,7 +14,7 @@ const HomePage = () => {
       <div className="fixed top-0 z-50 w-full">
         <Header />
       </div>
-      <main className="my-[60px] px-10 flex flex-col gap-16">
+      <main className="my-[60px] px-5 sm:px-10 flex flex-col gap-16">
         <section id="home">
           <Home />
         </section>

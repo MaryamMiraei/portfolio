@@ -76,7 +76,7 @@ const Projects = () => {
               description={item.description}
               className="p-4"
             />
-            <div className="px-4 pt-0 pb-6 flex items-center gap-4 ">
+            <div className="px-4 pt-0 pb-6 flex flex-wrap  gap-4 ">
               {item.liveDemoLink && (
                 <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 hover:text-text-fourth">
                   <ExternalLink size={20} />

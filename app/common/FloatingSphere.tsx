@@ -10,48 +10,9 @@ import {
   useAnimationFrame,
   color,
 } from "motion/react";
+import { icons } from "../data/Icons";
 
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiTailwindcss,
-  SiFlutter,
-  SiSwift,
-  SiGo,
-  SiNodedotjs,
-  SiExpress,
-  SiPostgresql,
-  SiFirebase,
-  SiRedis,
-  SiKubernetes,
-  SiDocker,
-  SiPython,
-  SiGit,
-  SiMongodb,
-} from "react-icons/si";
 
-const icons = [
-  { Icon: SiReact, color: "#61DAFB" },
-  { Icon: SiNextdotjs, color: "#000000" },
-  { Icon: SiTypescript, color: "#3178C6" },
-  { Icon: SiJavascript, color: "#F7DF1E" },
-  { Icon: SiTailwindcss, color: "#06B6D4" },
-  // { Icon: SiFlutter, color: "#02569B" },
-  // { Icon: SiSwift, color: "#F05138" },
-  // { Icon: SiGo, color: "#00ADD8" },
-  // { Icon: SiNodedotjs, color: "#5FA04E" },
-  // { Icon: SiExpress, color: "#FFFFFF" },
-  // { Icon: SiPostgresql, color: "#4169E1" },
-  // { Icon: SiFirebase, color: "#DD2C00" },
-  // { Icon: SiRedis, color: "#FF4438" },
-  // { Icon: SiKubernetes, color: "#326CE5" },
-  // { Icon: SiDocker, color: "#2496ED" },
-  // { Icon: SiPython, color: "#3776AB" },
-  { Icon: SiGit, color: "#F05032" },
-  // { Icon: SiMongodb, color: "#47A248" },
-];
 
 const FloatingSphere = () => {
   const [isMounted, setIsMounted] = useState(false);

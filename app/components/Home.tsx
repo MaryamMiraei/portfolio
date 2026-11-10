@@ -7,9 +7,9 @@ import i18n from "@/i18n";
 const Home = () => {
   const { t } = useTranslation();
   return (
-    <div className="py-10">
+    <div className="py-10 px-0 md:px-14 lg:px-16">
       <div className="flex flex-col gap-6 items-center justify-between lg:flex-row">
-        <div className="lg:max-w-2/3">
+        <div className="max-w-[800px]">
           <h1
             className="font-bold text-4xl mb-5"
             dir={i18n.language === "fa" ? "rtl" : "ltr"}
@@ -17,14 +17,18 @@ const Home = () => {
             {t("home.greeting")}
           </h1>
           <p
-            className="text-xl mb-8  text-text-third"
+            className="text-lg mb-8  text-text-third"
             dir={i18n.language === "fa" ? "rtl" : "ltr"}
           >
             {t("home.description")}
           </p>
-          <Button type="button">{t("home.button")}</Button>
+          <a href="/test_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <Button type="button">{t("home.button")}</Button>
+          </a>
         </div>
-        <FloatingSphere />
+        <div>
+          <FloatingSphere />
+        </div>
       </div>
     </div>
   );
