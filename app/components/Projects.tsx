@@ -17,7 +17,7 @@ interface IProjectsItems {
 const projectsItems: IProjectsItems[] = [
   {
     id: crypto.randomUUID(),
-    imgs: ["/test.png", "/m-logo.png"],
+    imgs: ["/QEM1.png", "/QEM2.png", "/QEM3.png", "/QEM4.png", "/QEM5.png"],
     title: "test",
     description:
       "A comprehensive, modern URL shortener featuring user accounts, link management, and an analytics dashboard.",
@@ -66,7 +66,7 @@ const Projects = () => {
   return (
     <div>
       <TitleSection title="Projects" description="" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-5 mb-8">
         {projectsItems.map((item) => (
           <Card key={item.id} className="hover:-translate-y-2 overflow-hidden">
             <ImageSlider images={item.imgs} title={item.title} />

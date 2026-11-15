@@ -22,13 +22,24 @@ const ImageSlider = ({ images, title }: IImageSliderProps) => {
 
   return (
     <div className="relative w-full overflow-hidden rounded-t-2xl">
-      <div className="relative aspect-video w-full">
+      {/* <div className="relative aspect-video w-full">
         <Image
           src={images[activeIndex]}
           alt={`${title} - Image ${activeIndex + 1}`}
           fill
           priority={false}
           className="object-cover transition-all duration-500"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div> */}
+
+      <div className="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
+        <Image
+          src={images[activeIndex]}
+          alt={`${title} - Image ${activeIndex + 1}`}
+          fill
+          priority={false}
+          className="object-contain transition-all duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

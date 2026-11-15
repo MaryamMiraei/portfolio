@@ -3,6 +3,7 @@ import Card from "../common/Card";
 import TitleSection from "../common/TitleSection";
 import { ChartColumn, Code, Lightbulb, Rocket } from "lucide-react";
 import TitleDescription from "../common/TitleDescription";
+import GithubContributions from "../common/GithubContributions";
 
 const About = () => {
   interface IAboutItems {
@@ -74,6 +75,7 @@ const About = () => {
           ))}
         </div>
       </div>
+      <div className="my-8"><Card><GithubContributions/></Card></div>
     </div>
   );
 };
