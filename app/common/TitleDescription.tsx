@@ -12,12 +12,12 @@ type Variant = "primary" | "secondary";
 
 interface ICardProps {
   title?: string;
-  description?: string;
+  description?: string | string[];
   titleVariant?: Variant;
   descriptionVariants?: Variant;
-  className?:string
+  className?: string;
 }
-const TitleDescription = ({
+export const TitleDescription = ({
   title,
   description,
   className,
@@ -35,14 +35,20 @@ const TitleDescription = ({
       )}
 
       {description && (
-        <p
+        <div
           className={`text-text-third mb-2 ${variantsDescription[descriptionVariants]}`}
         >
-          {description}
-        </p>
+          {Array.isArray(description) ? (
+            <div className="space-y-4">
+              {description.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          ) : (
+            <p>{description}</p>
+          )}
+        </div>
       )}
     </div>
   );
 };
-
-export default TitleDescription;

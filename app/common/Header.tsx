@@ -30,7 +30,7 @@ const Header = () => {
     <header className="flex justify-between items-center border-b border-border-first dark:border-border-second dark:bg-black bg-white h-[70px] px-6">
       <div>
         <img
-          src="/Glossy-Chrome-M-with-Red-Ribbons.png"
+          src="/logo.png"
           alt="logo"
           className="size-14"
         />

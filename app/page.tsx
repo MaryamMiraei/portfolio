@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Certificate from "./components/Certificate";
 
-
 const HomePage = () => {
   return (
     <div dir={i18n.language === "fa" ? "rtl" : "ltr"}>

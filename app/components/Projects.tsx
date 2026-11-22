@@ -1,68 +1,38 @@
+"use client";
 import TitleSection from "../common/TitleSection";
 import Card from "../common/Card";
-import TitleDescription from "../common/TitleDescription";
 import { ExternalLink } from "lucide-react";
 import { GrGithub } from "react-icons/gr";
 import ImageSlider from "../common/ImageSlider";
 import MotionButton from "../common/MotionButton";
-
-interface IProjectsItems {
-  id: string;
-  imgs: string[];
-  title: string;
-  description: string;
-  liveDemoLink?: string;
-  gitHubLink?: string;
-}
-const projectsItems: IProjectsItems[] = [
-  {
-    id: crypto.randomUUID(),
-    imgs: ["/QEM1.png", "/QEM2.png", "/QEM3.png", "/QEM4.png", "/QEM5.png"],
-    title: "test",
-    description:
-      "A comprehensive, modern URL shortener featuring user accounts, link management, and an analytics dashboard.",
-    liveDemoLink: "https://github.com/MaryamMiraei",
-    gitHubLink: "https://github.com/MaryamMiraei",
-  },
-  {
-    id: crypto.randomUUID(),
-    imgs: ["/test.png"],
-    title: "test",
-    description:
-      "A comprehensive, modern URL shortener featuring user accounts, link management, and an analytics dashboard.",
-    liveDemoLink: "https://github.com/MaryamMiraei",
-    gitHubLink: "https://github.com/MaryamMiraei",
-  },
-  {
-    id: crypto.randomUUID(),
-    imgs: ["/test.png"],
-    title: "test",
-    description:
-      "A comprehensive, modern URL shortener featuring user accounts, link management, and an analytics dashboard.",
-    liveDemoLink: "",
-    gitHubLink: "https://github.com/MaryamMiraei",
-  },
-  {
-    id: crypto.randomUUID(),
-    imgs: ["/test.png"],
-    title: "test",
-    description:
-      "A comprehensive, modern URL shortener featuring user accounts, link management, and an analytics dashboard.",
-    liveDemoLink: "",
-    gitHubLink: "https://github.com/MaryamMiraei",
-  },
-  {
-    id: crypto.randomUUID(),
-    imgs: ["/test.png"],
-    title: "test",
-    description:
-      "A comprehensive, modern URL shortener featuring user accounts, link management, and an analytics dashboard.",
-    liveDemoLink: "",
-    gitHubLink: "https://github.com/MaryamMiraei",
-  },
-];
+import { TitleDescription } from "../common/TitleDescription";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
+  interface IProjectsItems {
+    id: string;
+    imgs: string[];
+    title: string;
+    description: string;
+    technologies: string[];
+    liveDemoLink: string;
+    gitHubLink: string;
+  }
+  const projectsItems: IProjectsItems[] = [
+    {
+      id: crypto.randomUUID(),
+      imgs: ["/QEM1.png", "/QEM2.png", "/QEM3.png", "/QEM4.png", "/QEM5.png"],
+      title: t("projects.ems.title"),
+      description: t("projects.ems.description"),
+      technologies: t("projects.ems.technologies", {
+        returnObjects: true,
+      }) as string[],
+      liveDemoLink: "https://github.com/MaryamMiraei",
+      gitHubLink:
+        "https://github.com/MaryamMiraei/Full-Stack-Employee-Management-System",
+    },
+  ];
   return (
     <div>
       <TitleSection title="Projects" description="" />
@@ -76,6 +46,16 @@ const Projects = () => {
               description={item.description}
               className="p-4"
             />
+            <div className="px-4 pb-6 flex flex-wrap gap-2">
+              {item.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs px-3 py-1 rounded-full border border-border-first text-text-third"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
             <div className="px-4 pt-0 pb-6 flex flex-wrap  gap-4 ">
               {item.liveDemoLink && (
                 <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 hover:text-text-fourth">

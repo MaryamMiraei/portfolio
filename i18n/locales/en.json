@@ -4,12 +4,56 @@
     "about": "About",
     "projects": "Projects",
     "skills": "Skills",
-    "certificate":"certificate",
+    "certificate": "Certificate",
     "contact": "Contact"
   },
   "home": {
     "greeting": "Hi, I'm Maryam Miraei",
-    "description": "I'm enthusiastic about discovering new digital technologies and expanding my knowledge of innovative, creative design principles. My curiosity drives me to continuously learn about modern technologies and their potential to create meaningful experiences.",
+    "title": "Front-End Developer",
+    "description": "I specialize in building modern, responsive, and interactive web applications using React, Next.js, and TypeScript. With an engineering background and a passion for technology, I turn ideas into functional and engaging digital experiences.",
+    "subDescription": "Let's build something great together.",
     "button": "Download Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "description": [
+      "I'm a Front-End Developer with a background in Electronics Engineering and a strong passion for technology, problem-solving, and continuous learning.",
+      "My engineering background has shaped the way I approach challenges. It has strengthened my analytical and critical thinking skills, taught me to pay attention to detail, and helped me develop a structured approach to identifying problems, evaluating different solutions, and making thoughtful decisions.",
+      "I enjoy turning ideas into functional, responsive, and engaging web applications. Working with technologies like React, Next.js, TypeScript, and Tailwind CSS allows me to combine logical thinking with creativity to build intuitive user interfaces and meaningful digital experiences.",
+      "I value clean, maintainable code, continuous improvement, and staying curious about emerging technologies. I believe that becoming a great developer is an ongoing journey that requires curiosity, adaptability, critical thinking, and a genuine commitment to learning."
+    ],
+    "cards": {
+      "problemSolver": {
+        "title": "Problem Solver",
+        "description": "I approach complex challenges with analytical thinking and turn them into practical, well-structured solutions."
+      },
+      "cleanCode": {
+        "title": "Clean Code Advocate",
+        "description": "I focus on writing clean, reusable, and maintainable code while following modern development practices."
+      },
+      "continuousLearner": {
+        "title": "Continuous Learner",
+        "description": "I'm always exploring new technologies, improving my skills, and adapting to the evolving world of web development."
+      },
+      "userFocused": {
+        "title": "User-Focused",
+        "description": "I strive to create intuitive, responsive, and accessible interfaces that deliver meaningful user experiences."
+      }
+    }
+  },
+  "projects":{
+    "ems": {
+      "title": "Employee Management System",
+      "description": "A nearly full-stack Employee Management System built with Next.js, TypeScript, and Tailwind CSS. It features role-based access for Admin and Employee users, employee management, authentication, and payroll functionality, including salary calculations and payslip generation. Built with internal API routes and JSON Server as a local database, the project demonstrates practical full-stack development concepts.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Axios",
+        "TanStack Query",
+        "React Hook Form",
+        "JSON Server"
+      ]
+    }
   }
 }
