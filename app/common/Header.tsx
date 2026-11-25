@@ -80,7 +80,12 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center border-b border-border-first dark:border-border-second dark:bg-black bg-white h-[70px] px-6">
       <div>
-        <Image src="/logo.png" alt="logo" width={60} height={60} />
+        <Image
+          src="/Glossy-Chrome-M-with-Red-Ribbons.png"
+          alt="logo"
+          width={60}
+          height={60}
+        />
       </div>
 
       <div className="flex gap-5">

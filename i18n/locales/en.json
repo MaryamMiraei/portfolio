@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "work experience": "Work Experience",
     "skills": "Skills",
     "certificate": "Certificate",
     "contact": "Contact"
@@ -41,7 +42,7 @@
       }
     }
   },
-  "projects":{
+  "projects": {
     "ems": {
       "title": "Employee Management System",
       "description": "A nearly full-stack Employee Management System built with Next.js, TypeScript, and Tailwind CSS. It features role-based access for Admin and Employee users, employee management, authentication, and payroll functionality, including salary calculations and payslip generation. Built with internal API routes and JSON Server as a local database, the project demonstrates practical full-stack development concepts.",
@@ -55,5 +56,34 @@
         "JSON Server"
       ]
     }
+  },
+
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "position": "Front-End Developer",
+        "company": "CodeCoterie",
+        "date": "March 2026 – Present",
+        "description": [
+          "Developed and optimized cross-browser compatible front-end applications using React.js, Next.js, and Tailwind CSS, improving load speed.",
+          "Designed and implemented reusable UI components with Redux and Zustand, enhancing UI consistency and reducing development time.",
+          "Collaborated with UI/UX designers and backend developers to implement mobile-first, responsive interfaces, improving user experience and increasing user engagement."
+        ]
+      },
+      {
+        "position": "Electronics Engineering & Embedded Systems Experience",
+        "company": "",
+        "date": "December 2020 – March 2026",
+        "description": [
+          "Designed electronic circuits and PCB layouts using Altium Designer.",
+          "Developed embedded software and low-level programming for ARM microcontrollers.",
+          "Worked with low-level programming concepts, hardware-software interaction, and microcontroller-based systems.",
+          "Applied debugging, troubleshooting, and systematic testing techniques to identify and resolve technical issues.",
+          "Developed strong critical thinking, analytical reasoning, and problem-solving skills through engineering projects and technical challenges.",
+          "Relevant Skills: C Programming, ARM Microcontrollers, Embedded Systems, Altium Designer, Debugging, Critical Thinking, Analytical Thinking, Problem-Solving, and Technical Analysis."
+        ]
+      }
+    ]
   }
 }
