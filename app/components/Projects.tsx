@@ -28,7 +28,8 @@ const Projects = () => {
       technologies: t("projects.ems.technologies", {
         returnObjects: true,
       }) as string[],
-      liveDemoLink: "https://github.com/MaryamMiraei",
+      liveDemoLink:
+        "https://quick-esm-employee-management-system.m-miraei94.workers.dev/",
       gitHubLink:
         "https://github.com/MaryamMiraei/Full-Stack-Employee-Management-System",
     },
