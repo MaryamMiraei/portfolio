@@ -19,6 +19,7 @@ const Projects = () => {
     liveDemoLink: string;
     gitHubLink: string;
   }
+
   const projectsItems: IProjectsItems[] = [
     {
       id: crypto.randomUUID(),
@@ -32,6 +33,17 @@ const Projects = () => {
         "https://quick-esm-employee-management-system.m-miraei94.workers.dev/",
       gitHubLink:
         "https://github.com/MaryamMiraei/Full-Stack-Employee-Management-System",
+    },
+    {
+      id: crypto.randomUUID(),
+      imgs: ["/QR2.png","/QR3.png"],
+      title: t("projects.quickResume.title"),
+      description: t("projects.quickResume.description"),
+      technologies: t("projects.quickResume.technologies", {
+        returnObjects: true,
+      }) as string[],
+      liveDemoLink: "https://quick-resume.m-miraei94.workers.dev/",
+      gitHubLink: "https://github.com/MaryamMiraei/quick-resume",
     },
   ];
   return (

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "./providers/ThemeProvider";
 import I18nProvider from "./providers/i18nProvider";
+import { SerwistProvider } from "@serwist/next/react";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -29,9 +30,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`min-h-full antialiased bg-body-first dark:bg-body-second`}
     >
       <body className="flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <I18nProvider>{children}</I18nProvider>
-        </ThemeProvider>
+        <SerwistProvider
+          swUrl="/sw.js"
+          disable={process.env.NODE_ENV === "development"}
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <I18nProvider>{children}</I18nProvider>
+          </ThemeProvider>
+        </SerwistProvider>
       </body>
     </html>
   );

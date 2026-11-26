@@ -55,6 +55,17 @@
         "React Hook Form",
         "JSON Server"
       ]
+    },
+    "quickResume": {
+      "title": "Quick Resume",
+      "description": "A Resume Builder application built with React, TypeScript, and Vite. It provides a simple and user-friendly interface for creating and organizing professional resumes. Users can enter their personal information, work experience, education, and skills to build their resumes in an organized format. The project demonstrates modern React development practices and component-based architecture.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router"
+      ]
     }
   },
 
